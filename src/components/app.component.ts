@@ -13,7 +13,7 @@ import {CounterComponent} from 'components/counter.component';
     selector: 'app-workshop', // <app-workshop></app-workshop>
     template: `
         <p class="big-font">My first angular component!!</p>
-        <app-counter></app-counter>
+        <app-counter [count]="initialCount"></app-counter>
         `,
     // OR
     // templateUrl: 'url/to/template'
@@ -23,4 +23,6 @@ import {CounterComponent} from 'components/counter.component';
 
 })
 
-export class AppComponent {}
+export class AppComponent {
+    initialCount = 5;
+}
