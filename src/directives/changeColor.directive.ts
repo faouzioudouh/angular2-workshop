@@ -6,7 +6,7 @@ import {Directive, ElementRef} from '@angular/core';
 
 export class ChnageColorDirective {
 
-    constructor( ele: ElementRef) {
+    constructor( ele: ElementRef ) {
         setInterval(() => {
              const color = ele.nativeElement.style.color;
              ele.nativeElement.style.color = (color === '' || color === 'black') ? 'red' : 'black';
