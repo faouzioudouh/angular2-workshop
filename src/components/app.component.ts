@@ -4,6 +4,8 @@ import {Component} from '@angular/core';
 // Import components
 import {CounterComponent} from 'components/counter.component';
 
+import {ChnageColorDirective} from '../directives/changeColor.directive';
+
 /**
  * For further details please check: https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html
  */
@@ -12,7 +14,7 @@ import {CounterComponent} from 'components/counter.component';
     // selector
     selector: 'app-workshop', // <app-workshop></app-workshop>
     template: `
-        <p class="big-font">My {{initialCount | formatCount}} angular component!!</p>
+        <p class="big-font" changeColor>My {{initialCount | formatCount}} angular component!!</p>
         <app-counter 
             [count]="initialCount"
             (changed)="countChanged($event)">
@@ -20,7 +22,7 @@ import {CounterComponent} from 'components/counter.component';
         `,
     // OR
     // templateUrl: 'url/to/template'
-    styles: ['.big-font { font-size: 3em; }']
+    styles: ['.big-font { font-size: 3em; }'],
     // OR
     // styleUrl: 'url/to/stylesheet'
 

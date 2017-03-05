@@ -9,6 +9,9 @@ import {CounterComponent} from './components/counter.component';
 // Import Pipes
 import {FormatCountPipe} from './pipes/formatCount.pipe';
 
+// Import directives
+import {ChnageColorDirective} from './directives/changeColor.directive';
+
 /**
  *  For more details about NgModule decoretor: https://angular.io/docs/ts/latest/guide/appmodule.html
  */
@@ -17,7 +20,8 @@ import {FormatCountPipe} from './pipes/formatCount.pipe';
     declarations: [
         AppComponent,
         CounterComponent,
-        FormatCountPipe
+        FormatCountPipe,
+        ChnageColorDirective
         // List of all direvtices, pipes and components only!
         // You must declare every component in an NgModule class
     ],
@@ -27,7 +31,7 @@ import {FormatCountPipe} from './pipes/formatCount.pipe';
         // Only NgModule classes go in the imports array. Do not put any other kind of class in imports.
     ],
     providers: [
-        // List of all other components..
+        // List of all services..
     ],
     bootstrap: [
         AppComponent
