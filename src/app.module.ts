@@ -1,7 +1,10 @@
+// Import Core
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
+// Import componenets
 import {AppComponent} from './components/app.component';
+import {CounterComponent} from './components/counter.component';
 
 /**
  *  For more details about NgModule decoretor: https://angular.io/docs/ts/latest/guide/appmodule.html
@@ -9,7 +12,8 @@ import {AppComponent} from './components/app.component';
 @NgModule({
 
     declarations: [
-        AppComponent
+        AppComponent,
+        CounterComponent
         // List of all direvtices, pipes and components only!
         // You must declare every component in an NgModule class
     ],
