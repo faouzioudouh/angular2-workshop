@@ -12,7 +12,7 @@ import {CounterComponent} from 'components/counter.component';
     // selector
     selector: 'app-workshop', // <app-workshop></app-workshop>
     template: `
-        <p class="big-font">My {{initialCount}}'th angular component!!</p>
+        <p class="big-font">My {{initialCount | formatCount}} angular component!!</p>
         <app-counter 
             [count]="initialCount"
             (changed)="countChanged($event)">
