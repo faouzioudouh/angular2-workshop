@@ -12,6 +12,7 @@ import {FormatCountPipe} from './pipes/formatCount.pipe';
 
 // Import directives
 import {ChnageColorDirective} from './directives/changeColor.directive';
+import {DuplicateDirective} from './directives/duplicate.directive';
 
 // Import services
 import {ColorService} from './services/color.service';
@@ -25,7 +26,8 @@ import {ColorService} from './services/color.service';
         AppComponent,
         CounterComponent,
         FormatCountPipe,
-        ChnageColorDirective
+        ChnageColorDirective,
+        DuplicateDirective
         // List of all direvtices, pipes and components only!
         // You must declare every component in an NgModule class
     ],

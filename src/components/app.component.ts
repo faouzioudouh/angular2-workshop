@@ -10,6 +10,8 @@ import {ChnageColorDirective} from '../directives/changeColor.directive';
 // Import services
 import {ColorService} from '../services/color.service';
 
+//Import interfaces
+import {Color} from '../interfaces/color.interface';
 /**
  * For further details please check: https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html
  */
@@ -18,7 +20,7 @@ import {ColorService} from '../services/color.service';
     // selector
     selector: 'app-workshop', // <app-workshop></app-workshop>
     template: `
-        <p class="big-font" changeColor>My {{initialCount | formatCount}} angular component!!</p>
+        <p class="big-font" changeColor *duplicat="initialCount">My {{initialCount | formatCount}} angular component!!</p>
         <hr/>
         <p>Add color : </p>
         <input type="text" [value]="colorName" (input)="colorName = $event.target.value" />
@@ -33,6 +35,9 @@ import {ColorService} from '../services/color.service';
             [count]="initialCount"
             (changed)="countChanged($event)">
         </app-counter>
+        <div *ngFor="let color of colors">
+            {{color.name}}
+        </div>
         `,
     // OR
     // templateUrl: 'url/to/template'
@@ -47,9 +52,11 @@ export class AppComponent {
     colorName = '';
     colorDescription = '';
     colorService: ColorService;
+    colors: Color[] = [];
 
     constructor(colorService: ColorService) {
         this.colorService = colorService;
+        this.colors = this.colorService.getColors();
     }
 
     countChanged(event) {
